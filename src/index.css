@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Inter, Ubuntu, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Pro Display', Menlo, monospace;
+
+  --color-tv-bg: #ffffff;
+  --color-tv-card: #f0f3fa;
+  --color-tv-card-hover: #e8edf6;
+  --color-tv-text: #131722;
+  --color-tv-muted: #787b86;
+  --color-tv-border: #e0e3eb;
+  --color-tv-green: #089981;
+  --color-tv-green-bg: #e6f7f3;
+  --color-tv-red: #f23645;
+  --color-tv-red-bg: #fdedef;
+  --color-tv-blue: #2962ff;
+  --color-tv-blue-hover: #1e53e5;
+
+  --color-tv-dark-bg: #131722;
+  --color-tv-dark-card: #1e222d;
+  --color-tv-dark-card-hover: #2a2e39;
+  --color-tv-dark-text: #d1d4dc;
+  --color-tv-dark-muted: #787b86;
+  --color-tv-dark-border: #2a2e39;
+}
+
+/* Custom scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Micro sparklines */
+.sparkline-green {
+  stroke: #089981;
+  stroke-width: 1.75;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sparkline-red {
+  stroke: #f23645;
+  stroke-width: 1.75;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@keyframes flashGreen {
+  0% { background-color: rgba(8, 153, 129, 0.22); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flashRed {
+  0% { background-color: rgba(242, 54, 69, 0.22); }
+  100% { background-color: transparent; }
+}
+
+.flash-up {
+  animation: flashGreen 1.2s ease-out;
+}
+
+.flash-down {
+  animation: flashRed 1.2s ease-out;
+}
